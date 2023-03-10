@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>javascript current day and time </title>
+</head>
+<body>
+<script language="javascript"> 
+var today=new date();
+var day= today.getday();
+var daylist=["SUNDAY","MONDAY","TUESDAY","WENSDAY","THURSDAY","FRIDAY","SATURDAY"];
+document.writeln (today is :"+daylist[day]+".<br/>");
+var hour=today.gethours();
+var minute=today.getminutes();
+var prepand=(hour>=12)? "PM":"AM";
+hour=(hour>=12)? hour-12:hour;
+if (hour===0 && prepand==='PM')
+{
+if (minute===0 && second===0)
+hour=12;
+prepand='Noon';
+}
+else 
+
+{
+hour=12;
+prepand='PM'
+}
+}
+if (hour===0 && prepand==='AM')
+{
+if (minute===0 && second===0)
+{
+hour=12;
+
+prepand='MIDNIGHT';
+}
+else
+{
+hour=12;
+prepand='AM';
+}
+}
+document.write("current time:"+hour+prepand":+ minute+":"+second);
+</script>
+</body>
+</html>
